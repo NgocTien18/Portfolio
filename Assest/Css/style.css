@@ -653,6 +653,7 @@ a {
   margin: 10px;
   border-radius: 30px;
   transition: 0.5s ease;
+  overflow: hidden;
 }
 .education:hover {
   box-shadow: var(--main-color) 0px 0px 50px;
@@ -673,17 +674,17 @@ a {
 }
 
 .education .education-body {
+  position: relative;
   padding: 50px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
 }
 
 .education-timeline {
   position: relative;
   display: block;
   width: 10px;
-  height: 700px;
+  height: 900px;
   background-color: #fff;
   border-radius: 999px;
   box-shadow: var(--main-color) 0px 0px 10px;
@@ -719,18 +720,21 @@ a {
 }
 
 .education-date:nth-of-type(1) {
-  top: 23%;
+  top: 17%;
   left: 30px;
 }
 .education-date:nth-of-type(2) {
-  top: 50%;
+  top: 38%;
   right: 30px;
 }
-.education-date:nth-of-type(2)::before {
-}
+
 .education-date:nth-of-type(3) {
-  top: 75%;
+  top: 57%;
   left: 30px;
+}
+.education-date:nth-of-type(4) {
+  top: 78%;
+  right: 30px;
 }
 
 .education-timeline::before {
@@ -746,6 +750,7 @@ a {
 
 .education-left,
 .education-right {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -753,10 +758,16 @@ a {
   height: 500px;
 }
 .education-right {
-  justify-content: center;
+  bottom: 17%;
+  right: 1.5%;
+}
+.education-left {
+  top: 15%;
+  left: 1.5%;
 }
 
 .education .education-box {
+  position: relative;
   padding: 20px;
   background-color: #242222;
   display: flex;
@@ -770,8 +781,11 @@ a {
 }
 .education-box:hover {
   background-color: #000;
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: var(--main-color) 0px 0px 40px;
+}
+.education-box:hover .education-img {
+  transform: scale(1.7);
 }
 
 .education .education-info {
@@ -789,18 +803,21 @@ a {
 
 .education .education-desc {
   font-family: "BIZ UDPMincho", serif;
+  width: 70%;
   font-size: 1rem;
   line-height: 1.5;
   letter-spacing: 1px;
 }
 
 .education .education-img {
-  width: 30%;
+  position: a;
+  width: 25%;
   height: 100px;
   object-fit: cover;
   border-radius: 10px;
   border: 2px solid #fff;
   box-shadow: #fff 0px 0px 10px;
+  transition: 0.5s ease;
 }
 
 /************* PORTFOLIO *************/
