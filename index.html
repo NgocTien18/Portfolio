@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="jp">
   <head>
     <meta charset="UTF-8" />
@@ -10,15 +10,6 @@
     <link rel="stylesheet" href="./Assest/Css/style.css" />
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="./Assest/Css/responsive.css" />
-
-    <!------- Font Size ------->
-    <!-- font-family: "Montserrat", serif; -->
-    <!-- font-family: "Oswald", serif; -->
-    <!-- font-family: "Jersey 15", serif; -->
-    <!-- font-family: "Roboto Slab", serif; -->
-    <!-- font-family: "M PLUS Rounded 1c", serif; -->
-    <!-- font-family: "BIZ UDPMincho", serif; -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,10 +25,37 @@
   <body>
     <!-- HEADER -->
     <header class="header">
-      <div class="container">
+      <!-- Mobile-nav -->
+        <svg class="mobile_nav_icon" viewBox="0 0 640 640"><path fill = "currentColor" d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"/></svg>
+          <div class="mobile_nav-wrap ">
+            <span class="mobile_nav-backdrop">
+            <div class="mobile_nav-content">
+              <div class="mobile_nav-top">
+                <button id="closeBtn">&times;</button>
+                  <!-- Logo -->
+                  <div class="logo-box">
+                    <p class="logo-first_name">Luong Ngoc</p>
+                    <p class="logo-last_name">Tien</p>
+                  </div>
+              </div>
+              <span class="mobile_nav-line"></span>
+              <ul class="mobile_nav-list">
+                <!-- Home -->
+                 <a href="#" class="mobile_nav-item">ホーム</a>
+                 <a href="#about" class="mobile_nav-item">私について</a>
+                 <a href="#education" class="mobile_nav-item">学歴</a>
+                 <a href="#portfolio" class="mobile_nav-item">制作品</a>
+                 <a href="#footer" class="mobile_nav-item">お問い合わせ</a>
+                
+                </a>
+              </ul>
+            </div>
+          </span>
+        </div>
+      <div class="container">   
         <!-- Logo -->
         <a href="#" class="logo-box">
-          <p class="logo-first_name">Luong Ngoc</p>
+          <p class="logo-first_name text-nowrap">Luong Ngoc</p>
           <p class="logo-last_name">Tien</p>
         </a>
         <!-- Navigation -->
@@ -52,7 +70,7 @@
             <a href="#education" class="nav-link text-nowrap">学歴</a>
           </li>
           <li class="nav-item">
-            <a href="#portfolio" class="nav-link text-nowrap">ポートフォリオ</a>
+            <a href="#portfolio" class="nav-link text-nowrap">制作品</a>
           </li>
           <li class="nav-item">
             <a href="#footer" class="nav-link text-nowrap">お問い合わせ</a>
@@ -65,9 +83,7 @@
     <main class="main">
       <div class="container">
         <section class="home">
-          <div
-            class="home-info animate__animated animate__slideInLeft animate__slow"
-          >
+          <div class="home-info animate__animated animate__slideInLeft animate__slow">
             <div class="info-greeting">
               <p class="info-greeting__firts text-nowrap">こんにちは！私は</p>
               <h1 class="info-greeting__name text-nowrap">ティエン</h1>
@@ -101,14 +117,7 @@
                   />
                 </svg>
               </a>
-              <!-- Line -->
-              <a href="#!" class="contact-item" target="_blank">
-                <svg class="contact-icon" viewBox="0 0 512 512">
-                  <path
-                    fill="currentColor"
-                    d="M311 196.8v81.3c0 2.1-1.6 3.7-3.7 3.7h-13c-1.3 0-2.4-.7-3-1.5l-37.3-50.3v48.2c0 2.1-1.6 3.7-3.7 3.7h-13c-2.1 0-3.7-1.6-3.7-3.7V196.9c0-2.1 1.6-3.7 3.7-3.7h12.9c1.1 0 2.4 .6 3 1.6l37.3 50.3V196.9c0-2.1 1.6-3.7 3.7-3.7h13c2.1-.1 3.8 1.6 3.8 3.5zm-93.7-3.7h-13c-2.1 0-3.7 1.6-3.7 3.7v81.3c0 2.1 1.6 3.7 3.7 3.7h13c2.1 0 3.7-1.6 3.7-3.7V196.8c0-1.9-1.6-3.7-3.7-3.7zm-31.4 68.1H150.3V196.8c0-2.1-1.6-3.7-3.7-3.7h-13c-2.1 0-3.7 1.6-3.7 3.7v81.3c0 1 .3 1.8 1 2.5c.7 .6 1.5 1 2.5 1h52.2c2.1 0 3.7-1.6 3.7-3.7v-13c0-1.9-1.6-3.7-3.5-3.7zm193.7-68.1H327.3c-1.9 0-3.7 1.6-3.7 3.7v81.3c0 1.9 1.6 3.7 3.7 3.7h52.2c2.1 0 3.7-1.6 3.7-3.7V265c0-2.1-1.6-3.7-3.7-3.7H344V247.7h35.5c2.1 0 3.7-1.6 3.7-3.7V230.9c0-2.1-1.6-3.7-3.7-3.7H344V213.5h35.5c2.1 0 3.7-1.6 3.7-3.7v-13c-.1-1.9-1.7-3.7-3.7-3.7zM512 93.4V419.4c-.1 51.2-42.1 92.7-93.4 92.6H92.6C41.4 511.9-.1 469.8 0 418.6V92.6C.1 41.4 42.2-.1 93.4 0H419.4c51.2 .1 92.7 42.1 92.6 93.4zM441.6 233.5c0-83.4-83.7-151.3-186.4-151.3s-186.4 67.9-186.4 151.3c0 74.7 66.3 137.4 155.9 149.3c21.8 4.7 19.3 12.7 14.4 42.1c-.8 4.7-3.8 18.4 16.1 10.1s107.3-63.2 146.5-108.2c27-29.7 39.9-59.8 39.9-93.1z"
-                  />
-                </svg>
+       
               </a>
               <!-- Mail -->
               <a
@@ -131,6 +140,15 @@
                   />
                 </svg>
               </a>
+              <!-- github -->
+              <a href="https://github.com/dashboard"target="_blank" class="contact-item">
+                <svg class="contact-icon" viewBox="0 0 640 640">
+                  <path
+                    fill="currentColor"
+                    d="M237.9 461.4C237.9 463.4 235.6 465 232.7 465C229.4 465.3 227.1 463.7 227.1 461.4C227.1 459.4 229.4 457.8 232.3 457.8C235.3 457.5 237.9 459.1 237.9 461.4zM206.8 456.9C206.1 458.9 208.1 461.2 211.1 461.8C213.7 462.8 216.7 461.8 217.3 459.8C217.9 457.8 216 455.5 213 454.6C210.4 453.9 207.5 454.9 206.8 456.9zM251 455.2C248.1 455.9 246.1 457.8 246.4 460.1C246.7 462.1 249.3 463.4 252.3 462.7C255.2 462 257.2 460.1 256.9 458.1C256.6 456.2 253.9 454.9 251 455.2zM316.8 72C178.1 72 72 177.3 72 316C72 426.9 141.8 521.8 241.5 555.2C254.3 557.5 258.8 549.6 258.8 543.1C258.8 536.9 258.5 502.7 258.5 481.7C258.5 481.7 188.5 496.7 173.8 451.9C173.8 451.9 162.4 422.8 146 415.3C146 415.3 123.1 399.6 147.6 399.9C147.6 399.9 172.5 401.9 186.2 425.7C208.1 464.3 244.8 453.2 259.1 446.6C261.4 430.6 267.9 419.5 275.1 412.9C219.2 406.7 162.8 398.6 162.8 302.4C162.8 274.9 170.4 261.1 186.4 243.5C183.8 237 175.3 210.2 189 175.6C209.9 169.1 258 202.6 258 202.6C278 197 299.5 194.1 320.8 194.1C342.1 194.1 363.6 197 383.6 202.6C383.6 202.6 431.7 169 452.6 175.6C466.3 210.3 457.8 237 455.2 243.5C471.2 261.2 481 275 481 302.4C481 398.9 422.1 406.6 366.2 412.9C375.4 420.8 383.2 435.8 383.2 459.3C383.2 493 382.9 534.7 382.9 542.9C382.9 549.4 387.5 557.3 400.2 555C500.2 521.8 568 426.9 568 316C568 177.3 455.5 72 316.8 72zM169.2 416.9C167.9 417.9 168.2 420.2 169.9 422.1C171.5 423.7 173.8 424.4 175.1 423.1C176.4 422.1 176.1 419.8 174.4 417.9C172.8 416.3 170.5 415.6 169.2 416.9zM158.4 408.8C157.7 410.1 158.7 411.7 160.7 412.7C162.3 413.7 164.3 413.4 165 412C165.7 410.7 164.7 409.1 162.7 408.1C160.7 407.5 159.1 407.8 158.4 408.8zM190.8 444.4C189.2 445.7 189.8 448.7 192.1 450.6C194.4 452.9 197.3 453.2 198.6 451.6C199.9 450.3 199.3 447.3 197.3 445.4C195.1 443.1 192.1 442.8 190.8 444.4zM179.4 429.7C177.8 430.7 177.8 433.3 179.4 435.6C181 437.9 183.7 438.9 185 437.9C186.6 436.6 186.6 434 185 431.7C183.6 429.4 181 428.4 179.4 429.7z"
+                  />
+                </svg>
+              </a>
             </div>
             <!-- phần nút bấm -->
             <div class="atc-box">
@@ -139,9 +157,7 @@
               </a>
             </div>
           </div>
-          <div
-            class="home-img animate__animated animate__slideInRight animate__slow"
-          >
+          <div class="home-img animate__animated animate__slideInRight animate__slow">
             <div class="home-img__top">
               <figure class="img-wrap">
                 <img
@@ -149,7 +165,7 @@
                   alt="vietnam-map"
                   class="image"
                 />
-                <span class="img-line"></span>
+                
                 <p class="img-note text-nowrap">故郷 : フン イエン</p>
               </figure>
               <figure class="img-wrap">
@@ -158,7 +174,7 @@
                   alt="japan-map"
                   class="image"
                 />
-                <span class="img-line"></span>
+                
                 <p class="img-note text-nowrap">現在 : 東京</p>
               </figure>
             </div>
@@ -172,9 +188,7 @@
         </section>
 
         <section id="about" class="about">
-          <div
-            class="about-left wow animate__animated animate__slideInLeft animate__slower"
-          >
+          <div class="about-left wow animate__animated animate__slideInLeft animate__slower">
             <h2 class="about-title">自分のスキル</h2>
             <ul class="skill-list">
               <!-- html -->
@@ -214,10 +228,10 @@
                     />
                   </svg>
 
-                  <svg class="star-full" viewBox="0 0 576 512">
+                  <svg class="star-empty" viewBox="0 0 576 512">
                     <path
                       fill="currentColor"
-                      d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                      d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"
                     />
                   </svg>
                 </div>
@@ -259,10 +273,10 @@
                     />
                   </svg>
 
-                  <svg class="star-full" viewBox="0 0 576 512">
+                  <svg class="star-empty" viewBox="0 0 576 512">
                     <path
                       fill="currentColor"
-                      d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                      d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"
                     />
                   </svg>
                 </div>
@@ -674,9 +688,7 @@
               </li>
             </ul>
           </div>
-          <div
-            class="about-right wow animate__animated animate__slideInRight animate__slower"
-          >
+          <div class="about-right wow animate__animated animate__slideInRight animate__slower">
             <h2 class="about-title">趣味</h2>
             <ul class="interest-list">
               <!-- Bóng đá -->
@@ -689,7 +701,7 @@
                 />
                 <div class="interest-info">
                   <h3 class="interest-title">サッカーに関すること</h3>
-                  <p class="interest-desc">
+                  <p class="interest-desc text-overflow">
                     私はサッカーをすることが大好きで、健康を維持するだけでなく、チームワークやコミュニケーションスキルの向上にも役立ちます。サッカーをすること以外にも、試合を観戦したり、戦術について学んだり、サッカーに関連するグッズを集めたりするのが好きです
                   </p>
                 </div>
@@ -703,8 +715,8 @@
                   class="interest-img"
                 />
                 <div class="interest-info">
-                  <h3 class="interest-title">コーディング</h3>
-                  <p class="interest-desc">
+                  <h3 class="interest-title">復習こと</h3>
+                  <p class="interest-desc text-overflow">
                     自由な時間があるときは、静かな場所を見つけて集中して学んだり、コーディングの練習をするのが好きです。それはリラックスしながらスキルを向上させる私の方法です
                   </p>
                 </div>
@@ -719,7 +731,7 @@
                 />
                 <div class="interest-info">
                   <h3 class="interest-title">旅行</h3>
-                  <p class="interest-desc">
+                  <p class="interest-desc text-overflow">
                     休暇の時期には、新しい場所を訪れて文化を学んだり、リラックスできる時間を楽しんだりすることが好きです
                   </p>
                 </div>
@@ -787,12 +799,10 @@
           <h2 id="education" class="education-heading">学歴</h2>
           <div class="education-body">
             <div class="education-left">
-              <div
-                class="education-box wow animate__animated animate__bounceInUp animate__slower"
-              >
+              <div class="education-box wow animate__animated animate__bounceInUp animate__slower">
                 <div class="education-info">
-                  <h3 class="education-name">ベトナムの学校</h3>
-                  <p class="education-desc">
+                  <h3 class="education-name text-nowrap">ベトナムの学校</h3>
+                  <p class="education-desc text-overflow">
                     私はベトナムで12年間の学業を修了しました。この期間中、学科の知識を学ぶだけでなく、自分自身を成長させるための重要なスキルも身に付けることができました。これらの経験は、私が成長し、将来のためのしっかりとした基盤を築く助けとなりました。
                   </p>
                 </div>
@@ -803,12 +813,11 @@
                 />
               </div>
 
-              <div
-                class="education-box wow animate__animated animate__bounceInUp animate__slower animate__delay-3s"
+              <div class="education-box wow animate__animated animate__bounceInUp animate__slower animate__delay-3s"
               >
                 <div class="education-info">
-                  <h3 class="education-name">早稲田文理専門学校</h3>
-                  <p class="education-desc">
+                  <h3 class="education-name text-nowrap">早稲田文理専門学校</h3>
+                  <p class="education-desc text-overflow">
                     専門学校では、先生方から熱心な指導を受けました。必要な知識だけでなく、実践的な経験も教えていただき、おかげで自信を持って将来の仕事に備えることができました。
                   </p>
                 </div>
@@ -851,10 +860,10 @@
                   class="education-img"
                 />
                 <div class="education-info">
-                  <h3 class="education-name">
+                  <h3 class="education-name text-nowrap">
                     アンランゲージスクール 日本語学校
                   </h3>
-                  <p class="education-desc">
+                  <p class="education-desc text-overflow">
                     日本に来てから、多くの新しいことや興味深い経験をする機会がありました。最初は新しい環境に慣れるのが少し大変でしたが、学校の先生方の温かい支援のおかげで、困難を乗り越え、早く適応することができました。
                   </p>
                 </div>
@@ -869,8 +878,8 @@
                   class="education-img"
                 />
                 <div class="education-info">
-                  <h3 class="education-name">尚美学園大学 情報表現学科</h3>
-                  <p class="education-desc">
+                  <h3 class="education-name text-nowrap">尚美学園大学 情報表現学科</h3>
+                  <p class="education-desc text-overflow">
                     現在は尚美学園大学の情報表現学科で、Web分野を中心に学んでいます。講義や課題に加えて、自主的な学習や制作にも取り組みながら、実践的なスキルや考える力を高めています。将来、日本の職場で活躍できるよう、自分自身の能力をさらに伸ばしていきたいと考えています。
                   </p>
                 </div>
@@ -1001,6 +1010,26 @@
                 >
               </div>
             </li>
+
+            <li class="portfolio-item unfinished">
+              <img
+                src="./Assest/img/portfolio_7.webp"
+                alt="portfolio_1"
+                class="portfolio-img"
+              />
+              <div class="portfolio-info">
+                <h3 class="portfolio-title">尚美カフェテリア</h3>
+                <p class="portfolio-desc">
+                  現在通っている学校での活用を想定して制作しているプロジェクトです。カフェテリアの利便性向上を目的としています。
+                </p>
+                <a
+                  href="https://ngoctien18.github.io/Shobi_cafeteria/"
+                  target="_blank"
+                  class="portfolio-link"
+                  >詳しくはこちら</a
+                >
+              </div>
+            </li>
           </ul>
         </section>
       </div>
@@ -1008,48 +1037,53 @@
     <!-- FOOTER -->
     <footer id="footer" class="footer">
       <div class="container">
-        <h2 class="footer-title">ご覧いただき、誠にありがとうございます !</h2>
+        <h2 class="footer-title text-nowrap">ご覧いただき、誠にありがとうございます !</h2>
         <div class="footer-link">
-          <!-- facebook  -->
-          <a
-            href="https://www.facebook.com/tien.messi.18"
-            class="contact-item"
-            target="_blank"
-          >
-            <svg class="contact-icon" viewBox="0 0 512 512">
-              <path
-                fill="currentColor"
-                d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"
-              />
-            </svg>
-          </a>
-          <!-- Line -->
-          <a href="#!" class="contact-item" target="_blank">
-            <svg class="contact-icon" viewBox="0 0 512 512">
-              <path
-                fill="currentColor"
-                d="M311 196.8v81.3c0 2.1-1.6 3.7-3.7 3.7h-13c-1.3 0-2.4-.7-3-1.5l-37.3-50.3v48.2c0 2.1-1.6 3.7-3.7 3.7h-13c-2.1 0-3.7-1.6-3.7-3.7V196.9c0-2.1 1.6-3.7 3.7-3.7h12.9c1.1 0 2.4 .6 3 1.6l37.3 50.3V196.9c0-2.1 1.6-3.7 3.7-3.7h13c2.1-.1 3.8 1.6 3.8 3.5zm-93.7-3.7h-13c-2.1 0-3.7 1.6-3.7 3.7v81.3c0 2.1 1.6 3.7 3.7 3.7h13c2.1 0 3.7-1.6 3.7-3.7V196.8c0-1.9-1.6-3.7-3.7-3.7zm-31.4 68.1H150.3V196.8c0-2.1-1.6-3.7-3.7-3.7h-13c-2.1 0-3.7 1.6-3.7 3.7v81.3c0 1 .3 1.8 1 2.5c.7 .6 1.5 1 2.5 1h52.2c2.1 0 3.7-1.6 3.7-3.7v-13c0-1.9-1.6-3.7-3.5-3.7zm193.7-68.1H327.3c-1.9 0-3.7 1.6-3.7 3.7v81.3c0 1.9 1.6 3.7 3.7 3.7h52.2c2.1 0 3.7-1.6 3.7-3.7V265c0-2.1-1.6-3.7-3.7-3.7H344V247.7h35.5c2.1 0 3.7-1.6 3.7-3.7V230.9c0-2.1-1.6-3.7-3.7-3.7H344V213.5h35.5c2.1 0 3.7-1.6 3.7-3.7v-13c-.1-1.9-1.7-3.7-3.7-3.7zM512 93.4V419.4c-.1 51.2-42.1 92.7-93.4 92.6H92.6C41.4 511.9-.1 469.8 0 418.6V92.6C.1 41.4 42.2-.1 93.4 0H419.4c51.2 .1 92.7 42.1 92.6 93.4zM441.6 233.5c0-83.4-83.7-151.3-186.4-151.3s-186.4 67.9-186.4 151.3c0 74.7 66.3 137.4 155.9 149.3c21.8 4.7 19.3 12.7 14.4 42.1c-.8 4.7-3.8 18.4 16.1 10.1s107.3-63.2 146.5-108.2c27-29.7 39.9-59.8 39.9-93.1z"
-              />
-            </svg>
-          </a>
-          <!-- Mail -->
-          <a href="mailto:Luongngoctien180101@gamil.com" class="contact-item">
-            <svg class="contact-icon" viewBox="0 0 512 512">
-              <path
-                fill="currentColor"
-                d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256l0 32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32l0 80 0 32c0 17.7 14.3 32 32 32s32-14.3 32-32l0-32c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"
-              />
-            </svg>
-          </a>
-          <!-- Phone -->
-          <a href="tel:07039631375" class="contact-item">
-            <svg class="contact-icon" viewBox="0 0 512 512">
-              <path
-                fill="currentColor"
-                d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z"
-              />
-            </svg>
-          </a>
+          <!-- facebook -->
+              <a
+                href="https://www.facebook.com/tien.messi.18"
+                class="contact-item"
+                target="_blank"
+              >
+                <svg class="contact-icon" viewBox="0 0 512 512">
+                  <path
+                    fill="currentColor"
+                    d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"
+                  />
+                </svg>
+              </a>
+       
+              </a>
+              <!-- Mail -->
+              <a
+                href="mailto:Luongngoctien180101@gamil.com"
+                class="contact-item"
+              >
+                <svg class="contact-icon" viewBox="0 0 512 512">
+                  <path
+                    fill="currentColor"
+                    d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256l0 32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32l0 80 0 32c0 17.7 14.3 32 32 32s32-14.3 32-32l0-32c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"
+                  />
+                </svg>
+              </a>
+              <!-- Phone -->
+              <a href="tel:07039631375" class="contact-item">
+                <svg class="contact-icon" viewBox="0 0 512 512">
+                  <path
+                    fill="currentColor"
+                    d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z"
+                  />
+                </svg>
+              </a>
+              <!-- github -->
+              <a href="https://github.com/dashboard" target="_blank" class="contact-item">
+                <svg class="contact-icon" viewBox="0 0 640 640">
+                  <path
+                    fill="currentColor"
+                    d="M237.9 461.4C237.9 463.4 235.6 465 232.7 465C229.4 465.3 227.1 463.7 227.1 461.4C227.1 459.4 229.4 457.8 232.3 457.8C235.3 457.5 237.9 459.1 237.9 461.4zM206.8 456.9C206.1 458.9 208.1 461.2 211.1 461.8C213.7 462.8 216.7 461.8 217.3 459.8C217.9 457.8 216 455.5 213 454.6C210.4 453.9 207.5 454.9 206.8 456.9zM251 455.2C248.1 455.9 246.1 457.8 246.4 460.1C246.7 462.1 249.3 463.4 252.3 462.7C255.2 462 257.2 460.1 256.9 458.1C256.6 456.2 253.9 454.9 251 455.2zM316.8 72C178.1 72 72 177.3 72 316C72 426.9 141.8 521.8 241.5 555.2C254.3 557.5 258.8 549.6 258.8 543.1C258.8 536.9 258.5 502.7 258.5 481.7C258.5 481.7 188.5 496.7 173.8 451.9C173.8 451.9 162.4 422.8 146 415.3C146 415.3 123.1 399.6 147.6 399.9C147.6 399.9 172.5 401.9 186.2 425.7C208.1 464.3 244.8 453.2 259.1 446.6C261.4 430.6 267.9 419.5 275.1 412.9C219.2 406.7 162.8 398.6 162.8 302.4C162.8 274.9 170.4 261.1 186.4 243.5C183.8 237 175.3 210.2 189 175.6C209.9 169.1 258 202.6 258 202.6C278 197 299.5 194.1 320.8 194.1C342.1 194.1 363.6 197 383.6 202.6C383.6 202.6 431.7 169 452.6 175.6C466.3 210.3 457.8 237 455.2 243.5C471.2 261.2 481 275 481 302.4C481 398.9 422.1 406.6 366.2 412.9C375.4 420.8 383.2 435.8 383.2 459.3C383.2 493 382.9 534.7 382.9 542.9C382.9 549.4 387.5 557.3 400.2 555C500.2 521.8 568 426.9 568 316C568 177.3 455.5 72 316.8 72zM169.2 416.9C167.9 417.9 168.2 420.2 169.9 422.1C171.5 423.7 173.8 424.4 175.1 423.1C176.4 422.1 176.1 419.8 174.4 417.9C172.8 416.3 170.5 415.6 169.2 416.9zM158.4 408.8C157.7 410.1 158.7 411.7 160.7 412.7C162.3 413.7 164.3 413.4 165 412C165.7 410.7 164.7 409.1 162.7 408.1C160.7 407.5 159.1 407.8 158.4 408.8zM190.8 444.4C189.2 445.7 189.8 448.7 192.1 450.6C194.4 452.9 197.3 453.2 198.6 451.6C199.9 450.3 199.3 447.3 197.3 445.4C195.1 443.1 192.1 442.8 190.8 444.4zM179.4 429.7C177.8 430.7 177.8 433.3 179.4 435.6C181 437.9 183.7 438.9 185 437.9C186.6 436.6 186.6 434 185 431.7C183.6 429.4 181 428.4 179.4 429.7z"
+                  />
+                </svg>
+              </a>
         </div>
         <ul class="nav-list">
           <li class="nav-item">
@@ -1062,7 +1096,7 @@
             <a href="#education" class="nav-link text-nowrap">学歴</a>
           </li>
           <li class="nav-item">
-            <a href="#portfolio" class="nav-link text-nowrap">ポートフォリオ</a>
+            <a href="#portfolio" class="nav-link text-nowrap">制作品</a>
           </li>
         </ul>
         <p class="copy-right">© 2025 Luong Ngoc Tien</p>
@@ -1077,6 +1111,42 @@
     ></script>
     <script>
       new WOW().init();
+    </script>
+    <script>
+      // Open mobile menu
+      const openBtn = document.querySelector(".mobile_nav_icon");
+      const mobileNavWrap = document.querySelector(".mobile_nav-wrap");
+      const closeBtn = document.querySelector("#closeBtn");
+      const backdrop = document.querySelector(".mobile_nav-backdrop");
+      const mobileNavList = document.querySelectorAll(".mobile_nav-item");
+      for (let mobileNavItem of mobileNavList) {
+        mobileNavItem.onclick = function () {
+          closeMenu();
+        }
+        
+      }
+      
+      
+        openBtn.onclick = function () {
+          openMenu();
+        };
+      backdrop.onclick = function (e) {
+        if (e.target === backdrop) {
+          closeMenu();
+        }
+      };
+
+      closeBtn.onclick = () => {
+        closeMenu();
+      };
+      function openMenu() {
+        mobileNavWrap.classList.add("show");
+        document.body.classList.add("no-scroll");
+      }
+      function closeMenu() {
+        mobileNavWrap.classList.remove("show");
+        document.body.classList.remove("no-scroll");
+      }
     </script>
   </body>
 </html>
