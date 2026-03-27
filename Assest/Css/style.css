@@ -192,7 +192,7 @@ a {
 }
 
 .home .description-intro {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--main-color);
 }
 
@@ -804,27 +804,9 @@ a {
 .education-box:hover {
   background-color: #000;
   z-index: 10;
-  height: 50%;
   box-shadow: var(--main-color) 0px 0px 40px;
 }
-.education-box:hover .education-img {
-  position: absolute;
-  top: 10px;
-  width: 50%;
-  height: 40%;
-}
-.education-box:hover .education-info {
-  position: absolute;
-  bottom: 5%;
-  width: 100%;
-}
-.education-box:hover .education-name {
-  font-size: 2rem;
-}
-.education-box:hover .education-desc {
-  font-size: 1.2rem;
-  -webkit-line-clamp: 6;
-}
+
 .education .education-info {
   width: 70%;
   display: flex;

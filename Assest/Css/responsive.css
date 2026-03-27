@@ -202,18 +202,13 @@
     flex-direction: column;
   }
 
-  .education-box:hover {
-    width: 200%;
-  }
   .education .education-name {
     font-size: 0.8rem;
   }
   .education-box .education-desc {
     display: none;
   }
-  .education-box:hover .education-desc {
-    display: block;
-  }
+
   .education .education-img {
     width: 100%;
   }
